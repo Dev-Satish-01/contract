@@ -11,11 +11,6 @@ contract LendingPlatform {
     event Borrow(address indexed user, uint256 amount);
     event Repay(address indexed user, uint256 amount);
 
-    modifier onlyOwner() {
-        require(msg.sender == owner, "Not the owner");
-        _;
-    }
-
     constructor() {
         owner = msg.sender;
     }
